@@ -1,35 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;500&display=swap');
+
 /* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
 /* ===== HEADER ===== */
 .header {
   width: 100%;
-  background: #ffffff;
-  border-bottom: 1px solid #eee;
+  background-color: #000000;
+  border-bottom: 1px solid #222;
 }
 
 /* ===== NAVBAR ===== */
 .navbar {
   max-width: 1200px;
   margin: auto;
-  padding: 18px 20px;
+  padding: 16px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* ===== LOGO ===== */
-.logo a {
-  text-decoration: none;
-  font-size: 22px;
-  font-weight: 600;
-  color: #111;
-  letter-spacing: 1px;
+/* ===== BRAND TEXT ===== */
+.brand {
+  line-height: 1.1;
+}
+
+.logo-text {
+  font-family: 'Cinzel', serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #d4af37;
+}
+
+.tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #d4af37;
+  margin-top: 4px;
 }
 
 /* ===== NAV LINKS ===== */
@@ -41,21 +54,21 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
-  font-size: 15px;
-  font-weight: 500;
+  color: #e5e5e5;
+  font-size: 14px;
+  letter-spacing: 1px;
   position: relative;
 }
 
-/* Hover underline (premium touch) */
+/* Gold hover underline */
 .nav-links a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -5px;
+  bottom: -6px;
   width: 0%;
   height: 2px;
-  background: #000;
+  background: #d4af37;
   transition: 0.3s ease;
 }
 
@@ -63,7 +76,7 @@
   width: 100%;
 }
 
-/* ===== MENU ICON (MOBILE) ===== */
+/* ===== MOBILE MENU ICON ===== */
 .menu-icon {
   display: none;
   flex-direction: column;
@@ -72,18 +85,22 @@
 }
 
 .menu-icon span {
-  width: 25px;
+  width: 24px;
   height: 2px;
-  background: #000;
+  background: #d4af37;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .nav-links {
-    display: none; /* later we will add JS */
+    display: none;
   }
 
   .menu-icon {
     display: flex;
+  }
+
+  .logo-text {
+    font-size: 22px;
   }
 }
