@@ -1,0 +1,89 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== HEADER ===== */
+.header {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===== LOGO ===== */
+.logo a {
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: 1px;
+}
+
+/* ===== NAV LINKS ===== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+}
+
+/* Hover underline (premium touch) */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #000;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ===== MENU ICON (MOBILE) ===== */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  width: 25px;
+  height: 2px;
+  background: #000;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* later we will add JS */
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+}
